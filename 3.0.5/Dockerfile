@@ -20,5 +20,5 @@ RUN  mkdir -p $BASE_DIR/webapps/geonetwork && \
 EXPOSE 8080
 
 #Set geonetwork data dir
-COPY ../docker-entrypoint.sh /entrypoint.sh
+COPY ./docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
