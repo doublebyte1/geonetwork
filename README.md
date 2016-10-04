@@ -1,15 +1,11 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`3.0.4` (*3.0.4/Dockerfile*)](https://github.com/geocat/geonetwork-official-images/blob/a320f026e9ac1d00d4e5c53d7ccb5f1dd008db97/3.0.4/Dockerfile)
--	[`3.0.4-postgres` (*3.0.4/postgres/Dockerfile*)](https://github.com/geocat/geonetwork-official-images/blob/7b12888fee485e19953ba7387c9ea6d61f5c69e2/3.0.4/postgres/Dockerfile)
--	[`3.0.5`, `3`, `latest` (*3.0.5/Dockerfile*)](https://github.com/geocat/geonetwork-official-images/blob/a320f026e9ac1d00d4e5c53d7ccb5f1dd008db97/3.0.5/Dockerfile)
--	[`3.0.5-postgres`, `3-postgres`, `postgres` (*3.0.5/postgres/Dockerfile*)](https://github.com/geocat/geonetwork-official-images/blob/c180183ce9de0ad70fa89ed53a36c773e66c63ef/3.0.5/postgres/Dockerfile)
--	[`3.2.0`, `3.2`, `develop` (*3.2.0/Dockerfile*)](https://github.com/geocat/geonetwork-official-images/blob/a320f026e9ac1d00d4e5c53d7ccb5f1dd008db97/3.2.0/Dockerfile)
--	[`3.2.0-postgres`, `3.2-postgres`, `develop-postgres` (*3.2.0/postgres/Dockerfile*)](https://github.com/geocat/geonetwork-official-images/blob/c180183ce9de0ad70fa89ed53a36c773e66c63ef/3.2.0/postgres/Dockerfile)
-
-For more information about this image and its history, please see [the relevant manifest file (`library/geonetwork`)](https://github.com/docker-library/official-images/blob/master/library/geonetwork). This image is updated via [pull requests to the `docker-library/official-images` GitHub repo](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fgeonetwork).
-
-For detailed information about the virtual/transfer sizes and individual layers of each of the above supported tags, please see [the `repos/geonetwork/tag-details.md` file](https://github.com/docker-library/repo-info/blob/master/repos/geonetwork/tag-details.md) in [the `docker-library/repo-info` GitHub repo](https://github.com/docker-library/repo-info).
+-	[`3.0.4` (*3.0.4/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/a320f026e9ac1d00d4e5c53d7ccb5f1dd008db97/3.0.4/Dockerfile)
+-	[`3.0.4-postgres` (*3.0.4/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/e51e25c5bbdd97fc767d3e618f1c4cb92542b9a6/3.0.4/postgres/Dockerfile)
+-	[`3.0.5`, `3`, `latest` (*3.0.5/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/c2c09806d66ca3c5bda2d2baeadb0acfcaf720b5/3.0.5/Dockerfile)
+-	[`3.0.5-postgres`, `3-postgres`, `postgres` (*3.0.5/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/e51e25c5bbdd97fc767d3e618f1c4cb92542b9a6/3.0.5/postgres/Dockerfile)
+-	[`3.2.0`, `3.2`, `develop` (*3.2.0/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/c2c09806d66ca3c5bda2d2baeadb0acfcaf720b5/3.2.0/Dockerfile)
+-	[`3.2.0-postgres`, `3.2-postgres`, `develop-postgres` (*3.2.0/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/e51e25c5bbdd97fc767d3e618f1c4cb92542b9a6/3.2.0/postgres/Dockerfile)
 
 # What is GeoNetwork?
 
@@ -155,16 +151,6 @@ Support for older versions (down to 1.6) is provided on a best-effort basis.
 Please see [the Docker installation documentation](https://docs.docker.com/installation/) for details on how to upgrade your Docker daemon.
 
 # User Feedback
-
-## Documentation
-
-Documentation for this image is stored in the [`geonetwork/` directory](https://github.com/docker-library/docs/tree/master/geonetwork) of the [`docker-library/docs` GitHub repo](https://github.com/docker-library/docs). Be sure to familiarize yourself with the [repository's `README.md` file](https://github.com/docker-library/docs/blob/master/README.md) before attempting a pull request.
-
-## Issues
-
-If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/geocat/geonetwork-official-images/issues). If the issue is related to a CVE, please check for [a `cve-tracker` issue on the `official-images` repository first](https://github.com/docker-library/official-images/issues?q=label%3Acve-tracker).
-
-You can also reach many of the official image maintainers via the `#docker-library` IRC channel on [Freenode](https://freenode.net).
 
 ## Contributing
 

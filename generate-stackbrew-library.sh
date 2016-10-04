@@ -35,10 +35,10 @@ dirCommit() {
 }
 
 cat <<-EOH
-# this file is generated via https://github.com/doublebyte1/geonetwork/blob/non-official/$(fileCommit "$self")/$self
+# this file is generated via https://github.com/doublebyte1/geonetwork/blob/$(fileCommit "$self")/$self
 
 Maintainers: Joana Simoes <joana.simoes@geocat.net> (@doublebyte1)
-GitRepo: https://github.com/doublebyte1/geonetwork/non-official/
+GitRepo: https://github.com/doublebyte1/geonetwork/
 EOH
 
 # prints "$2$1$3$1...$N"
