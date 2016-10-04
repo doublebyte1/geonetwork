@@ -2,9 +2,8 @@
 set -eu
 
 declare -A aliases=(
-	[3.0.4]='old',
-	[3.0.5]='3 3.0 latest',
-	[3.2.0]='3.2 develop'
+        [3.0.5]='3 latest'
+        [3.2.0]='3.2 develop'
 )
 
 self="$(basename "$BASH_SOURCE")"
@@ -50,27 +49,30 @@ join() {
 }
 
 for version in "${versions[@]}"; do
-	for variant in h2 postgres; do
+	commit="$(dirCommit "$version")"
+
+	fullVersion="$(git show "$commit":"$version/Dockerfile" | awk '$1 == "ENV" && $2 == "GN_VERSION" { print $3; exit }')"
+
+	versionAliases=(
+		$fullVersion
+		$version
+		${aliases[$version]:-}
+	)
+
+	echo
+	cat <<-EOE
+		Tags: $(join ', ' "${versionAliases[@]}")
+		GitCommit: $commit
+		Directory: $version
+	EOE
+
+	for variant in postgres; do
+		[ -f "$version/$variant/Dockerfile" ] || continue
+
 		commit="$(dirCommit "$version/$variant")"
-
-		fullVersion="$(git show "$commit":"$version/$variant/Dockerfile" | awk '$1 == "ENV" && $2 == "GN_VERSION" { print $3; exit }')"
-
-		versionAliases=()
-		while [ "$fullVersion" != "$version" -a "${fullVersion%[.-]*}" != "$fullVersion" ]; do
-			versionAliases+=( $fullVersion )
-			fullVersion="${fullVersion%[.-]*}"
-		done
-		versionAliases+=(
-			$version
-			${aliases[$version]:-}
-		)
 
 		variantAliases=( "${versionAliases[@]/%/-$variant}" )
 		variantAliases=( "${variantAliases[@]//latest-/}" )
-
-		if [ "$variant" = 'h2' ]; then
-			variantAliases+=( "${versionAliases[@]}" )
-		fi
 
 		echo
 		cat <<-EOE
