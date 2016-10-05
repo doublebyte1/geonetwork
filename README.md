@@ -28,7 +28,7 @@ The project is part of the Open Source Geospatial Foundation ( [OSGeo](http://ww
 This command will start a debian-based container, running a Tomcat web server, with a geonetwork war deployed on the server:
 
 ```console
-$ docker run --name some-geonetwork -d geonetwork
+$ docker run --name some-geonetwork -d geocat/geonetwork
 ```
 
 ## Publish port
@@ -36,7 +36,7 @@ $ docker run --name some-geonetwork -d geonetwork
 Geonetwork listens on port `8080`. If you want to access the container at the host, **you must publish this port**. For instance, this, will redirect all the container traffic on port 8080, to the same port on the host:
 
 ```console
-$ docker run --name some-geonetwork -d -p 8080:8080 geonetwork
+$ docker run --name some-geonetwork -d -p 8080:8080 geocat/geonetwork
 ```
 
 Then, if you are running docker on Linux, you may access geonetwork at http://localhost:8080/geonetwork. Otherwise, replace `localhost` by the address of your docker machine.
@@ -50,7 +50,7 @@ By default, geonetwork sets the data directory on `/usr/local/tomcat/webapps/geo
 For instance, to set the data directory to `/var/lib/geonetwork_data`:
 
 ```console
-$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data geonetwork
+$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data geocat/geonetwork
 ```
 
 ## Persist data
@@ -58,7 +58,7 @@ $ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetw
 If you want the data directory to live beyond restarts, or even destruction of the container, you can mount a directory from the docker engine's host into the container. - `-v <host path>:<data directory>`. For instance this, will mount the host directory `/host/geonetwork-docker` into `/var/lib/geonetwork_data` on the container:
 
 ```console
-$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data -v /host/geonetwork-docker:/var/lib/geonetwork_data geonetwork
+$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data -v /host/geonetwork-docker:/var/lib/geonetwork_data geocat/geonetwork
 ```
 
 ## ... via [`docker-compose`](https://github.com/docker/compose)
@@ -77,7 +77,7 @@ version: '2'
 services:
 
     geonetwork:
-      image: geonetwork
+      image: geocat/geonetwork
       ports:
           - 8080:8080
       environment:
@@ -96,13 +96,13 @@ After installation a default user with name `admin` and password `admin` is crea
 
 The `geonetwork` images come in many flavors, each designed for a specific use case.
 
-## `geonetwork:<version>`
+## `geocat/geonetwork:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
 By default, an H2 database is configured and created when the application first starts. If you are interested in a database engine other than H2, please have a look at other image variants.
 
-## `geonetwork:postgres`
+## `geocat/geonetwork:postgres`
 
 This image gives support for using [PostgreSQL](https://www.postgresql.org/) as database engine for geonetwork. When you start the container, a database is created, and it is populated by geonetwork, once it starts.
 
@@ -125,7 +125,7 @@ $ docker run --name some-postgres -p 5432:5432 -d postgres
 And then you could launch geonetwork, linking to this container, and setting the required environment variables:
 
 ```console
-$ docker run --name geonetwork -d -p 8080:8080 --link some-postgres:postgres -e POSTGRES_DB_USERNAME=postgres -e POSTGRES_DB_PASSWORD=mysecretpassword geonetwork:postgres
+$ docker run --name geonetwork -d -p 8080:8080 --link some-postgres:postgres -e POSTGRES_DB_USERNAME=postgres -e POSTGRES_DB_PASSWORD=mysecretpassword geocat/geonetwork:postgres
 ```
 
 ### Connecting to a postgres instance
@@ -135,7 +135,7 @@ If you want to connect to a postgres server running somewhere, you need to pass 
 For instance, if the server is running on `192.168.1.10`, on port `5434`, the username is `postgres` and the password is `mysecretpassword`:
 
 ```console
-$ docker run --name geonetwork -d -p 8080:8080 -e POSTGRES_DB_HOST=192.168.1.10 -e POSTGRES_DB_PORT=5434 -e POSTGRES_DB_USERNAME=postgres -e POSTGRES_DB_PASSWORD=mysecretpassword geonetwork:postgres
+$ docker run --name geonetwork -d -p 8080:8080 -e POSTGRES_DB_HOST=192.168.1.10 -e POSTGRES_DB_PORT=5434 -e POSTGRES_DB_USERNAME=postgres -e POSTGRES_DB_PASSWORD=mysecretpassword geocat/geonetwork:postgres
 ```
 
 # License
