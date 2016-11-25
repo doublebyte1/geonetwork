@@ -1,11 +1,11 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`3.0.4` (*3.0.4/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/a320f026e9ac1d00d4e5c53d7ccb5f1dd008db97/3.0.4/Dockerfile)
--	[`3.0.4-postgres` (*3.0.4/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/e51e25c5bbdd97fc767d3e618f1c4cb92542b9a6/3.0.4/postgres/Dockerfile)
--	[`3.0.5`, `3`, `latest` (*3.0.5/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/c2c09806d66ca3c5bda2d2baeadb0acfcaf720b5/3.0.5/Dockerfile)
--	[`3.0.5-postgres`, `3-postgres`, `postgres` (*3.0.5/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/e51e25c5bbdd97fc767d3e618f1c4cb92542b9a6/3.0.5/postgres/Dockerfile)
--	[`3.2.0`, `3.2`, `develop` (*3.2.0/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/c2c09806d66ca3c5bda2d2baeadb0acfcaf720b5/3.2.0/Dockerfile)
--	[`3.2.0-postgres`, `3.2-postgres`, `develop-postgres` (*3.2.0/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/e51e25c5bbdd97fc767d3e618f1c4cb92542b9a6/3.2.0/postgres/Dockerfile)
+-	[`3.0.4` (*3.0.4/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/b65e0df997508b59559e7f5e1be06ee12a8f8567/3.0.4/Dockerfile)
+-	[`3.0.4-postgres` (*3.0.4/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/990035235f8abbcc9eb43007f06fc6441a1e2451/3.0.4/postgres/Dockerfile)
+-	[`3.0.5`, `3`, `latest` (*3.0.5/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/b65e0df997508b59559e7f5e1be06ee12a8f8567/3.0.5/Dockerfile)
+-	[`3.0.5-postgres`, `3-postgres`, `postgres` (*3.0.5/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/990035235f8abbcc9eb43007f06fc6441a1e2451/3.0.5/postgres/Dockerfile)
+-	[`3.2.0`, `3.2`, `develop` (*3.2.0/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/b65e0df997508b59559e7f5e1be06ee12a8f8567/3.2.0/Dockerfile)
+-	[`3.2.0-postgres`, `3.2-postgres`, `develop-postgres` (*3.2.0/postgres/Dockerfile*)](https://github.com/doublebyte1/geonetwork//blob/990035235f8abbcc9eb43007f06fc6441a1e2451/3.2.0/postgres/Dockerfile)
 
 # What is GeoNetwork?
 
