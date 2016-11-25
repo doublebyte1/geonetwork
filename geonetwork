@@ -1,0 +1,28 @@
+# this file is generated via https://github.com/doublebyte1/geonetwork/blob/c3f6e0711c761e81e887b2dd4eccffd750c9158d/generate-stackbrew-library.sh
+
+Maintainers: Joana Simoes <joana.simoes@geocat.net> (@doublebyte1)
+GitRepo: https://github.com/doublebyte1/geonetwork/
+
+Tags: 3.0.4
+GitCommit: b65e0df997508b59559e7f5e1be06ee12a8f8567
+Directory: 3.0.4
+
+Tags: 3.0.4-postgres
+GitCommit: 990035235f8abbcc9eb43007f06fc6441a1e2451
+Directory: 3.0.4/postgres
+
+Tags: 3.0.5, 3, latest
+GitCommit: b65e0df997508b59559e7f5e1be06ee12a8f8567
+Directory: 3.0.5
+
+Tags: 3.0.5-postgres, 3-postgres, postgres
+GitCommit: 990035235f8abbcc9eb43007f06fc6441a1e2451
+Directory: 3.0.5/postgres
+
+Tags: 3.2.0, 3.2, develop
+GitCommit: b65e0df997508b59559e7f5e1be06ee12a8f8567
+Directory: 3.2.0
+
+Tags: 3.2.0-postgres, 3.2-postgres, develop-postgres
+GitCommit: 990035235f8abbcc9eb43007f06fc6441a1e2451
+Directory: 3.2.0/postgres
